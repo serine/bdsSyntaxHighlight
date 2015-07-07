@@ -24,9 +24,8 @@ syntax match   bdsNumbers            /\v<[0-9]*.[0-9]*>/
 
 syntax match   bdsComment            /\v#.*$/  contains=bdsTodo
 syntax match   bdsComment            /\v\/\/.*$/ contains=bdsTodo
-"NOTE
-" I'm not sure is I need to use skip in this range. If I do include skip then
-" commenting doesn't work
+
+"I'm not sure if I need to include 'skip'. If I do include it then commenting doesn't work
 "syntax region  bdsComment            start=/\v\/\*/ skip=/\\./ end=/\v\*\// contains=bdsTodo
 syntax region  bdsComment            start=/\v\/\*/ end=/\v\*\// contains=bdsTodo
 syntax keyword bdsTodo               FIXME NOTE NOTES TODO XXX contained
