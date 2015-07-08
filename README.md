@@ -16,9 +16,8 @@ or flick me email.
 ----------------------------------------------------------------------------------------------------
 
 Okay, It turned out much bigger job to make syntax highlight than I anticipated at the start...
-I can call a plugin now !
 
-I understand all that [pathogen](https://github.com/tpope/vim-pathogen) plugin does is it sets the
+I understand all [pathogen](https://github.com/tpope/vim-pathogen) plugin does is it sets the
 right `runtimepath` to look in `bundle` directory for all other relevant directories and I am pretty
 sure than my plugin is pathogen compatible and therefore:
 
