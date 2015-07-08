@@ -1,5 +1,7 @@
 # Vim Scripting guide
 
+_Still under development :)_
+
 ## I want to understand Vim scripting in the context of _indent.vim_ file 
 
 There are four main methods available fo rindentation, each one overrides the previous if it is
