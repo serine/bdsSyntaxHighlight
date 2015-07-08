@@ -26,7 +26,7 @@ enbale, or non-empty for 'indentexpt'
 - `indentexpr` Vim calls the function identified by this option to calculate the required indent for a line. 
 - `indentkeys` If a line contains any of the strings contained in this option, Vim calls the indent function.
                In other words, this option dictates when the indentation process is performed.
-- `shiftwidth The amount of columns (i.e. the number of spaces, or the equivalent number of tabs) corresponding
+- `shiftwidth` The amount of columns (i.e. the number of spaces, or the equivalent number of tabs) corresponding
               to one indent level. Often set by the user to suit their own taste.
 
 ## Other
