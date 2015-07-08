@@ -19,7 +19,7 @@ I thought to give a quick break down of the syntax highlighting
 
 Here is by the way how colors look for me using `molokai` colorsheme ![vimSyntaxKeywords-molokai](supplementary/vimSyntaxKeywords-molokai.png)
 
-So if you have any suggestions and/or other comments on the plugin please don't hesitate to raise and issue
+So if you have any suggestions and/or other comments on the plugin please don't hesitate to raise an issue
 or flick me email. 
 
 ----------------------------------------------------------------------------------------------------
