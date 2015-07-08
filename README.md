@@ -1,5 +1,13 @@
 # BigDataScript Vim syntax highlight plugin
 
+_Have you got dig data..? You are better get the right script for it then --> [BigDataScript](http://pcingola.github.io/BigDataScript/)_
+
+- [Thus far - plugin](#thus-far-plugin)
+- [Installation](#installation)
+  * [Pathogen](#pathogen)
+  * [Old school](#old-school)
+- [Useful links](#useful-links)
+
 ## Thus far - plugin:
 
 I thought to give a quick break down of the syntax highlighting
@@ -29,7 +37,7 @@ sure than my plugin is pathogen compatible and therefore:
 
 And you should get your bds syntax highlighting
 
-### Old school (Vim) way
+### Old school
 
 You need to place all directories under `~/.vim/`. If you already have some or all of those directories simply
 move `bds.vim` file into appropriate directory name.
