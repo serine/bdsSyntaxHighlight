@@ -8,9 +8,12 @@ I thought to give a quick break down of the syntax highlighting
 - `print println` are highlighted as functions (just like `print` in python)
 - `task sys goal dep par` are also highlighted as functions...
 
-Here is by the way how color look for me using `molokai` colorsheme ![vimSyntaxKeywords-molokai](supplementary/vimSyntaxKeywords-molokai.png)
-i
-Not sure if I can call it a plugin since there is only one file, but I guess it plugs in..
+Here is by the way how colors look for me using `molokai` colorsheme ![vimSyntaxKeywords-molokai](supplementary/vimSyntaxKeywords-molokai.png)
+
+So if you have any suggestions and/or other comments on the plugin please don't hesitate to raise and issue
+or flick me email. 
+
+----------------------------------------------------------------------------------------------------
 
 Okay, It turned out much bigger job to make syntax highlight than I anticipated at the start...
 I can call a plugin now !
