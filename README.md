@@ -1,6 +1,6 @@
 # BigDataScript Vim syntax highlight plugin
 
-## Thus far color cover:
+## Thus far - plugin:
 
 I thought to give a quick break down of the syntax highlighting
 
