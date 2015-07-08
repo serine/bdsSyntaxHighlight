@@ -1,7 +1,9 @@
 " Vim syntax file
 " Language: BigDataScript a.k.a bds
 " Maintainer: Kirill Tsyganov <kirill.tsyganov@monash.edu>
-" Latest Revision: 6 July 2015
+" Created: 6 July 2015
+" Version: 1.0
+" Latest Revision: 9 July 2015
 
 if exists ("b:current_syntax")
   finish

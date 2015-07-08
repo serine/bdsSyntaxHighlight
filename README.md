@@ -46,8 +46,8 @@ ftdetect
 ftplugin
 indent
 README.md
+supplementary
 syntax
-vimScriptingGuide.md
 ~~~
 
 _if none of those directories exist in `~/.vim/`_
