@@ -1,12 +1,13 @@
 # BigDataScript Vim syntax highlight plugin
 
-_Have you got dig data..? You are better get the right script for it then --> [BigDataScript](http://pcingola.github.io/BigDataScript/)_
+_Have you got big data..? Well you are better get the right script for it then --> [BigDataScript](http://pcingola.github.io/BigDataScript/)_
 
 - [Thus far - plugin](#thus-far-plugin)
 - [Installation](#installation)
   * [Pathogen](#pathogen)
   * [Old school](#old-school)
 - [Useful links](#useful-links)
+- [Vim syntax plugin guide](#supplementary/vimSyntaxGuide)
 
 ## Thus far - plugin:
 
