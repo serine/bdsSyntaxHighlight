@@ -1,13 +1,23 @@
-## BigDataScript Vim syntax highlight plugin
+# BigDataScript Vim syntax highlight plugin
 
+## Thus far color cover:
+
+I thought to give a quick break down of the syntax highlighting
+
+- `break continue wait exit return checkpoint breakpoint` are all Statements
+- `print println` are highlighted as functions (just like `print` in python)
+- `task sys goal dep par` are also highlighted as functions...
+
+Here is by the way how color look for me using `molokai` colorsheme ![vimSyntaxKeywords-molokai](supplementary/vimSyntaxKeywords-molokai.png)
+i
 Not sure if I can call it a plugin since there is only one file, but I guess it plugs in..
 
 Okay, It turned out much bigger job to make syntax highlight than I anticipated at the start...
 I can call a plugin now !
 
-I understand that all that [pathogen](https://github.com/tpope/vim-pathogen) plugin does is sets the
-right `runtimepath` to look in `bundle` direcotry for all other relevant directories. I pretty sure
-This plugin is pathoge compatible and therefore:
+I understand all that [pathogen](https://github.com/tpope/vim-pathogen) plugin does is it sets the
+right `runtimepath` to look in `bundle` directory for all other relevant directories and I am pretty
+sure than my plugin is pathogen compatible and therefore:
 
 ## Installation
 
