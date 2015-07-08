@@ -7,7 +7,7 @@ _Have you got big data..? Well you are better get the right script for it then -
   * [Pathogen](#pathogen)
   * [Old school](#old-school)
 - [Useful links](#useful-links)
-- [Vim syntax plugin guide](#supplementary/vimSyntaxGuide.md)
+- [Vim syntax plugin guide](supplementary/vimSyntaxGuide.md)
 
 ## Thus far - plugin:
 
