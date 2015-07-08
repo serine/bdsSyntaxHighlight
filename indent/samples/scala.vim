@@ -1,8 +1,8 @@
 " Vim indent file
-" Language   : Scala (http://scala-lang.org/)
-" Maintainer : Stefan Matthias Aust
+" Language: Scala (http://scala-lang.org/)
+" Maintainer: Stefan Matthias Aust
 " Last Change: 2006 Apr 13
-
+" Source: https://groups.google.com/forum/?fromgroups#!topic/bigdatascript-users/yZZwbylaHSo
 if exists("b:did_indent")
   finish
 endif

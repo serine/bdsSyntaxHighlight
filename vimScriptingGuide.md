@@ -1,6 +1,4 @@
-## BigDataScript Vim syntax highlight plugin
-
-Not sure if I can call it a plugin since there is only one file, but I guess it plugs in..
+# Vim Scripting guide
 
 ## I want to understand Vim scripting in the context of _indent.vim_ file 
 
@@ -30,7 +28,6 @@ enbale, or non-empty for 'indentexpt'
                In other words, this option dictates when the indentation process is performed.
 - `shiftwidth The amount of columns (i.e. the number of spaces, or the equivalent number of tabs) corresponding
               to one indent level. Often set by the user to suit their own taste.
-
 
 ## Other
 

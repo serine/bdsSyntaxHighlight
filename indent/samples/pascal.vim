@@ -4,6 +4,8 @@
 " Created:     2004 Jul 13
 " Last Change: 2005 Jun 15
 
+" Source: http://www.psy.swansea.ac.uk/staff/carter/Vim/vim_indent.htm
+
 
 if exists("b:did_indent")
 	finish
