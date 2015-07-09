@@ -35,3 +35,11 @@ enbale, or non-empty for 'indentexpt'
 
 - `v:lnum` (lnumber-variable) line number for the indentexpr. The `v` prefix means variable
            predefined by Vim
+
+## Useful links
+
+- [syntax highlight thoughbot](https://robots.thoughtbot.com/writing-vim-syntax-plugins)
+- [plugin for go language](https://github.com/fatih/vim-go)
+- [more on indent vim scripting](http://www.psy.swansea.ac.uk/staff/carter/Vim/vim_indent.htm)
+- [Learn vim the hard way](http://learnvimscriptthehardway.stevelosh.com/chapters/43.html) great book
+- [Good intro guide to syntax highlight](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
