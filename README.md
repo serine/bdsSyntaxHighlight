@@ -13,7 +13,7 @@ _Have you got big data..? Well you are better get the right script for it then -
 
 I thought to give a quick break down of the syntax highlighting
 
-- `break continue wait exit return checkpoint breakpoint` are all Statements
+- `break continue wait exit return checkpoint breakpoint goal` are all Statements
 - `print println` are highlighted as functions (just like `print` in python)
 - `task sys dep par` are also highlighted as functions...
 - `cpus allowEmpty canFail timeout node queue retry taskName` are task's Identifiers
