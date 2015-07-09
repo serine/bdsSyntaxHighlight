@@ -15,7 +15,9 @@ I thought to give a quick break down of the syntax highlighting
 
 - `break continue wait exit return checkpoint breakpoint` are all Statements
 - `print println` are highlighted as functions (just like `print` in python)
-- `task sys goal dep par` are also highlighted as functions...
+- `task sys dep par` are also highlighted as functions...
+- `cpus allowEmpty canFail timeout node queue retry taskName` are task's Identifiers
+- `local ssh cluster moab pbs sge generic mesos` are Constant
 
 Here is by the way how colors look for me using `molokai` colorsheme ![vimSyntaxKeywords-molokai](supplementary/vimSyntaxKeywords-molokai.png)
 

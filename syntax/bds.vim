@@ -13,13 +13,15 @@ syntax keyword bdsConditional        if else
 syntax keyword bdsRepeat             for while
 syntax keyword bdsBoolean            true fasle
 syntax keyword bdsType               string int bool real contained
-syntax keyword bdsSpecialStatement   task sys goal dep par
+syntax keyword bdsSpecialStatement   task sys dep par
 syntax keyword bdsPrintStatements    print println
 syntax keyword bdsStatement          break continue wait exit return
-syntax keyword bdsStatement          checkpoint breakpoint
+syntax keyword bdsStatement          checkpoint breakpoint goal
 syntax keyword bdsInclude            include
 syntax keyword bdsDebug              debug
 syntax keyword bdsError              error warning
+syntax keyword bdsTaskIdentifier     cpus allowEmpty canFail timeout node queue retry taskName
+syntax keyword bdsConstant           local ssh cluster moab pbs sge generic mesos
 
 syntax match   bdsNumbers            /\v<[0-9]*>/
 syntax match   bdsNumbers            /\v<[0-9]*.[0-9]*>/
@@ -62,6 +64,8 @@ highlight link bdsStatement          Statement
 highlight link bdsInclude            Include
 highlight link bdsDebug              Debug
 highlight link bdsError              Error
+highlight link bdsTaskIdentifier     Identifier
+highlight link bdsConstant           Constant
 
 highlight link bdsComment            Comment
 highlight link bdsTodo               Todo
