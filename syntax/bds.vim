@@ -11,7 +11,7 @@ endif
 
 syntax keyword bdsConditional        if else
 syntax keyword bdsRepeat             for while
-syntax keyword bdsBoolean            true fasle
+syntax keyword bdsBoolean            true false
 syntax keyword bdsType               string int bool real contained
 syntax keyword bdsSpecialStatement   task sys dep par
 syntax keyword bdsPrintStatements    print println
@@ -63,7 +63,7 @@ highlight link bdsStatement          Statement
 highlight link bdsStatement          Statement
 highlight link bdsInclude            Include
 highlight link bdsDebug              Debug
-highlight link bdsError              Error
+highlight link bdsError              Keyword
 highlight link bdsTaskIdentifier     Identifier
 highlight link bdsConstant           Constant
 
