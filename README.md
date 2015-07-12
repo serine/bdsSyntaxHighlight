@@ -7,7 +7,6 @@ _Have you got big data..? Well you are better get the right script for it then -
   * [Pathogen](#pathogen)
   * [Old school](#old-school)
 - [Usage](#usage)
-- [Useful links](#useful-links)
 - [Vim syntax plugin guide](supplementary/vimScriptingGuide.md)
 
 ## Thus far - plugin:
@@ -21,7 +20,7 @@ I thought to give a quick break down of the syntax highlighting
 - `cpus allowEmpty canFail timeout node queue retry taskName` are task's Identifiers
 - `mem node queue retry system timeout walltimeout taskShell sysShell` are Identifiers
 
-Here is by the way how colors look for me using `molokai` colorsheme ![vimSyntaxKeywords-molokai](supplementary/vimSyntaxKeywords-molokai.png)
+This is colors look for me using `molokai` colorsheme ![vimSyntaxKeywords-molokai](supplementary/vimSyntaxKeywords-molokai.png)
 
 So if you have any suggestions and/or other comments on the plugin please don't hesitate to raise an issue
 or flick me email. 
@@ -89,9 +88,3 @@ Add those two lines to your `~/.vimrc`
 " Interpret BDS error and warning command as Keyword instead of Error
 let bdsErrorAsKeyword = 1
 ```
-
-## Useful links
-
-_this mainly a reminder for myself, but also for other who developing syntax highlight Vim plugins_
-
-[GO-syntax-highlight](https://github.com/fatih/vim-go)
