@@ -84,7 +84,7 @@ colored with red highlight e.g ![bdsErrorError](supplementary/bdsErrorError.png)
 However users might wish to change `error` and `warning` to `Keyword` instead, which in molokai colorsheme
 is colored with magenta red e.g ![bdsErrorKeyword](supplementary/bdsErrorKeyword.png)
 
-Add those two line to your `~/.vimrc`
+Add those two lines to your `~/.vimrc`
 ```
 " Interpret BDS error and warning command as Keyword instead of Error
 let bdsErrorAsKeyword = 1
