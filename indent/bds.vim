@@ -1,11 +1,10 @@
 " Vim indent file
-" Language: [BigDataScript](http://pcingola.github.io/BigDataScript/) a.k.a bds
+" Language: BigDataScript a.k.a bds
 " Maintainer: Kirill Tsyganov <kirill.tsyganov@monash.edu>
 " Created: 6 July 2015
 " Version: 1.0
 " Latest Revision: 8 July 2015
 
-" `b:` for local-buffer
 " Only load this indent file when no other was loaded
 if exists("b:did_indent")
   finish
