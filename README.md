@@ -85,8 +85,10 @@ However users might wish to change `error` and `warning` to `Keyword` instead, w
 is colored with magenta red e.g ![bdsErrorKeyword](supplementary/bdsErrorKeyword.png)
 
 Add those two line to your `~/.vimrc`
-`" Interpret BDS error and warning command as Keyword instead of Error`
-`let bdsErrorAsKeyword = 1`
+```
+" Interpret BDS error and warning command as Keyword instead of Error
+let bdsErrorAsKeyword = 1
+```
 
 ## Useful links
 
