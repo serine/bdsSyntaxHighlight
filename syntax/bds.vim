@@ -21,7 +21,7 @@ syntax keyword bdsInclude            include
 syntax keyword bdsError              error warning
 syntax keyword bdsDebug              debug
 syntax keyword bdsTaskIdentifier     cpus allowEmpty canFail timeout node queue retry taskName
-syntax keyword bdsIdentifier         meme node queue retry system timeout walltimeout taskShell sysShell
+syntax keyword bdsIdentifier         mem node queue retry system timeout walltimeout taskShell sysShell
 syntax keyword bdsConstant           local ssh cluster moab pbs sge generic mesos
 
 " function that check if settings exist or not

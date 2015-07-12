@@ -6,6 +6,7 @@ _Have you got big data..? Well you are better get the right script for it then -
 - [Installation](#installation)
   * [Pathogen](#pathogen)
   * [Old school](#old-school)
+- [Usage](#usage)
 - [Useful links](#useful-links)
 - [Vim syntax plugin guide](supplementary/vimScriptingGuide.md)
 
@@ -16,8 +17,9 @@ I thought to give a quick break down of the syntax highlighting
 - `break continue wait exit return checkpoint breakpoint goal` are all Statements
 - `print println` are highlighted as functions (just like `print` in python)
 - `task sys dep par` are also highlighted as functions...
-- `cpus allowEmpty canFail timeout node queue retry taskName` are task's Identifiers
 - `local ssh cluster moab pbs sge generic mesos` are Constant
+- `cpus allowEmpty canFail timeout node queue retry taskName` are task's Identifiers
+- `mem node queue retry system timeout walltimeout taskShell sysShell` are Identifiers
 
 Here is by the way how colors look for me using `molokai` colorsheme ![vimSyntaxKeywords-molokai](supplementary/vimSyntaxKeywords-molokai.png)
 
@@ -74,6 +76,17 @@ $ mv ftdetect/bds.vim ~/.vim/ftdetect/
 ~~~
 
 Repeat for all of bds.vim files.
+
+## Usage
+
+By default `error` and `warning` area set to `Error` syntax higlight, which in moloaki colorsheme
+colored with red highlight e.g ![bdsErrorError](supplementary/bdsErrorError.png)
+However users might wish to change `error` and `warning` to `Keyword` instead, which in molokai colorsheme
+is colored with magenta red e.g ![bdsErrorKeyword](suppleementary/bdsErrorKeyword.png)
+
+Add those two line to your `~/.vimrc`
+`" Interpret BDS error and warning command as Keyword instead of Error`
+`let bdsErrorAsKeyword = 1`
 
 ## Useful links
 
