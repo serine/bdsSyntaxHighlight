@@ -18,10 +18,16 @@ syntax keyword bdsPrintStatements    print println
 syntax keyword bdsStatement          break continue wait exit return
 syntax keyword bdsStatement          checkpoint breakpoint goal
 syntax keyword bdsInclude            include
-syntax keyword bdsDebug              debug
 syntax keyword bdsError              error warning
+syntax keyword bdsDebug              debug
 syntax keyword bdsTaskIdentifier     cpus allowEmpty canFail timeout node queue retry taskName
+syntax keyword bdsIdentifier         meme node queue retry system timeout walltimeout taskShell sysShell
 syntax keyword bdsConstant           local ssh cluster moab pbs sge generic mesos
+
+" function that check if settings exist or not
+function! s:Enable(name)
+  return exists(a:name) && {a:name}
+endfunction
 
 syntax match   bdsNumbers            /\v<[0-9]*>/
 syntax match   bdsNumbers            /\v<[0-9]*.[0-9]*>/
@@ -63,8 +69,8 @@ highlight link bdsStatement          Statement
 highlight link bdsStatement          Statement
 highlight link bdsInclude            Include
 highlight link bdsDebug              Debug
-highlight link bdsError              Keyword
 highlight link bdsTaskIdentifier     Identifier
+highlight link bdsIdentifier         Identifier
 highlight link bdsConstant           Constant
 
 highlight link bdsComment            Comment
@@ -76,6 +82,17 @@ highlight link bdsHelpOption         String
 highlight link bdsHelpString         String
 highlight link bdsSpecialChar        SpecialChar
 
+" Highlight error and warning as syntax Error OR Keyword
+" Default error and warning are highlighted as syntax Error
+" let bdsErrorAsKeyword = 1 
+" to enable error and warning to be highlighted as Keyword
+if !s:Enable("g:bdsErrorAsKeyword")
+  highlight link bdsError Error
+else
+  highlight link bdsError Keyword
+endif
+"----------------------------------------------------------------------
+"
 highlight link bdsFunctionStatement  Error
 highlight link bdsStringFunction     Function
 highlight link bdsNumberFunction     Function
