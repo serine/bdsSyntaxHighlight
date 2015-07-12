@@ -80,7 +80,7 @@ Repeat for all of bds.vim files.
 ## Usage
 
 By default `error` and `warning` area set to `Error` syntax higlight, which in moloaki colorsheme
-colored with red highlight e.g ![bdsErrorError](supplementary/bdsErrorError.png)
+colored with red highlight e.g ![bdsErrorError](supplementary/bdsErrorError.png)<br>
 However users might wish to change `error` and `warning` to `Keyword` instead, which in molokai colorsheme
 is colored with magenta red e.g ![bdsErrorKeyword](supplementary/bdsErrorKeyword.png)
 
