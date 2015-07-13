@@ -47,6 +47,7 @@ syntax region  bdsString             start=/\v'/ skip=/\v\\./ end=/\v'/
 
 syntax match   bdsHelpString         /\vhelp\s.*$/ contains=bdsSpecialChar
 syntax keyword bdsSpecialChar        help contained
+syntax keyword bdsHelpUnsorted       helUnsorted
 
 syntax match   bdsStringContainer    /\(string\(\[\]\|{}\)\|string\)/ contains=bdsType
 syntax match   bdsNumberContainer    /\(int\(\[\]\|{}\)\|int\)/ contains=bdsType
@@ -80,7 +81,8 @@ highlight link bdsString             String
 highlight link bdsHelpOption         String
 
 highlight link bdsHelpString         String
-highlight link bdsSpecialChar        SpecialChar
+highlight link bdsSpecialChar        Keyword
+highlight link bdsHelpUnsorted       Keyword
 
 " Highlight error and warning as syntax Error OR Keyword
 " Default error and warning are highlighted as syntax Error
