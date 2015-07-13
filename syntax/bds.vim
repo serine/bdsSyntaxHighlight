@@ -47,7 +47,7 @@ syntax region  bdsString             start=/\v'/ skip=/\v\\./ end=/\v'/
 
 syntax match   bdsHelpString         /\vhelp\s.*$/ contains=bdsSpecialChar
 syntax keyword bdsSpecialChar        help contained
-syntax keyword bdsHelpUnsorted       helUnsorted
+syntax keyword bdsHelpUnsorted       helpUnsorted
 
 syntax match   bdsStringContainer    /\(string\(\[\]\|{}\)\|string\)/ contains=bdsType
 syntax match   bdsNumberContainer    /\(int\(\[\]\|{}\)\|int\)/ contains=bdsType
