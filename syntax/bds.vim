@@ -9,64 +9,59 @@ if exists ("b:current_syntax")
   finish
 endif
 
-"syntax sync    linebreaks=50
+" function that check if settings exist or not
+function! s:Enable(name)
+  return exists(a:name) && {a:name}
+endfunction
 
 syntax keyword bdsConditional        if else
 syntax keyword bdsRepeat             for while
 syntax keyword bdsBoolean            true false
-syntax keyword bdsType               string int real contained
+syntax keyword bdsType               string int real
 syntax keyword bdsBoolType           bool
 syntax keyword bdsSpecialStatement   task sys dep par
 syntax keyword bdsPrintStatements    print println
 syntax keyword bdsStatement          break continue wait exit return
 syntax keyword bdsStatement          checkpoint breakpoint goal
 syntax keyword bdsInclude            include
-syntax keyword bdsError              error warning
 syntax keyword bdsDebug              debug
 syntax keyword bdsTaskIdentifier     cpus allowEmpty canFail timeout node queue retry taskName
 syntax keyword bdsIdentifier         mem node queue retry system timeout walltimeout taskShell sysShell
 syntax keyword bdsConstant           local ssh cluster moab pbs sge generic mesos
 
-" function that check if settings exist or not
-function! s:Enable(name)
-  return exists(a:name) && {a:name}
-endfunction
-
 syntax match   bdsNumbers            /\v<[0-9]*>/
 syntax match   bdsNumbers            /\v<[0-9]*.[0-9]*>/
-
-syntax match   bdsComment            /\v#.*/  contains=bdsTodo
-syntax match   bdsComment            /\v\/\/.*/ contains=bdsTodo
-
-"I'm not sure if I need to include 'skip'. If I do include it then commenting doesn't work
-"syntax region  bdsComment            start=/\v\/\*/ skip=/\\./ end=/\v\*\// contains=bdsTodo
-"syntax region  bdsComment            start=/\v\/\*/ end=/\v\*\// contains=bdsTodo
-" look like there are multiple ways to match bdsCommnet
-syntax region  bdsComment            start="/\*" end="\*/" contains=bdsTodo
-syntax keyword bdsTodo               FIXME NOTE NOTES TODO XXX contained
-
-syntax match   bdsSpecialOperator    /<-/
 
 syntax region  bdsString             start=/\v"/ skip=/\v\\./ end=/\v"/
 syntax region  bdsString             start=/\v'/ skip=/\v\\./ end=/\v'/ 
 
-"syntax match   bdsHelpString         /\vhelp\s.*$/ contains=bdsSpecialChar
-syntax region  bdsHelpString         start="\vhelp\s" skip="\v\\"  end="\v\n" contains=bdsSpecialChar
-syntax keyword bdsSpecialChar        help contained
+syntax match   bdsSpecialOperator    /<-/
+
+"look like there are multiple ways to match bdsCommnet
+"syntax region  bdsComment            start=/\v\/\*/ end=/\v\*\// contains=bdsTodo
+syntax keyword bdsTodo               FIXME NOTE NOTES TODO XXX contained
+syntax region  bdsComment            start="/\*" end="\*/" contains=bdsTodo
+syntax match   bdsComment            /\v#.*/  contains=bdsTodo
+syntax match   bdsComment            /\v\/\/.*/ contains=bdsTodo
+
+syntax keyword bdsError              error warning
+
 syntax keyword bdsHelpUnsorted       helpUnsorted
+syntax keyword bdsHelpKeyword        help contained
+"syntax match   bdsHelpString         /\vhelp\s.*$/ contains=bdsSpecialChar
+syntax region  bdsHelpString         start="\vhelp\s" skip="\v\\"  end="\v\n" contains=bdsHelpKeyword
 
-syntax match   bdsStringContainer    /\(string\(\[\]\|{}\)\|string\)/ contains=bdsType
-syntax match   bdsNumberContainer    /\(int\(\[\]\|{}\)\|int\)/ contains=bdsType
-syntax match   bdsNumberContainer    /\(real\(\[\]\|{}\)\|real\)/ contains=bdsType
+" no corresponding highlight link
+syntax keyword bdsContainerString    string int real contained
+syntax match   bdsContainer          /[A-Za-z]*\[\]\|{}/ contains=bdsContainerString
 
-syntax match   bdsStringFunction           /\(string\(\[\]\|{}\)\|string\)\s[A-Za-z]*(/ contains=bdsType
-syntax match   bdsNumberFunction           /\(int\(\[\]\|{}\)\|int\)\s[A-Za-z]*(/ contains=bdsType
+" \@= is a look ahead Vim regex
+"syntax match   bdsStringFunction     /[A-Za-z]*\(\[\]\|{}\)\s*[A-Za-z]*\((\)\@=/ contains=bdsContainerString
+syntax match   bdsFunction           /[A-Za-z]*\(\[\]\|{}\)\s*[A-Za-z]*\((\)\@=/ contains=bdsContainer
 
-highlight link bdsStringContainer    Type
-highlight link bdsNumberContainer    Type
-
-highlight link bdsNumbers            Number
-
+"------------------------------
+" higlighting
+"------------------------------
 highlight link bdsConditional        Conditional
 highlight link bdsRepeat             Repeat
 highlight link bdsBoolean            Boolean
@@ -82,15 +77,14 @@ highlight link bdsTaskIdentifier     Identifier
 highlight link bdsIdentifier         Identifier
 highlight link bdsConstant           Constant
 
-highlight link bdsComment            Comment
-highlight link bdsTodo               Todo
-highlight link bdsSpecialOperator    Operator
-highlight link bdsString             String
-highlight link bdsHelpOption         String
+highlight link bdsNumbers            Number
 
-highlight link bdsHelpString         String
-highlight link bdsSpecialChar        Keyword
-highlight link bdsHelpUnsorted       Keyword
+highlight link bdsString             String
+
+highlight link bdsSpecialOperator    Operator
+
+highlight link bdsTodo               Todo
+highlight link bdsComment            Comment
 
 " Highlight error and warning as syntax Error OR Keyword
 " Default error and warning are highlighted as syntax Error
@@ -101,10 +95,13 @@ if !s:Enable("g:bdsErrorAsKeyword")
 else
   highlight link bdsError Keyword
 endif
-"----------------------------------------------------------------------
-"
-highlight link bdsFunctionStatement  Error
-highlight link bdsStringFunction     Function
-highlight link bdsNumberFunction     Function
+
+highlight link bdsHelpUnsorted       Keyword
+highlight link bdsHelpKeyword        Keyword
+highlight link bdsHelpString         String
+
+highlight link bdsContainer          Type
+
+highlight link bdsFunction           Function
 
 let b:current_syntax = "bds"
