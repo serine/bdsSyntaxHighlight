@@ -9,6 +9,8 @@ if exists ("b:current_syntax")
   finish
 endif
 
+"syntax sync    linebreaks=50
+
 syntax keyword bdsConditional        if else
 syntax keyword bdsRepeat             for while
 syntax keyword bdsBoolean            true false
@@ -33,12 +35,14 @@ endfunction
 syntax match   bdsNumbers            /\v<[0-9]*>/
 syntax match   bdsNumbers            /\v<[0-9]*.[0-9]*>/
 
-syntax match   bdsComment            /\v#.*$/  contains=bdsTodo
-syntax match   bdsComment            /\v\/\/.*$/ contains=bdsTodo
+syntax match   bdsComment            /\v#.*/  contains=bdsTodo
+syntax match   bdsComment            /\v\/\/.*/ contains=bdsTodo
 
 "I'm not sure if I need to include 'skip'. If I do include it then commenting doesn't work
 "syntax region  bdsComment            start=/\v\/\*/ skip=/\\./ end=/\v\*\// contains=bdsTodo
-syntax region  bdsComment            start=/\v\/\*/ end=/\v\*\// contains=bdsTodo
+"syntax region  bdsComment            start=/\v\/\*/ end=/\v\*\// contains=bdsTodo
+" look like there are multiple ways to match bdsCommnet
+syntax region  bdsComment            start="/\*" end="\*/" contains=bdsTodo
 syntax keyword bdsTodo               FIXME NOTE NOTES TODO XXX contained
 
 syntax match   bdsSpecialOperator    /<-/
@@ -46,7 +50,8 @@ syntax match   bdsSpecialOperator    /<-/
 syntax region  bdsString             start=/\v"/ skip=/\v\\./ end=/\v"/
 syntax region  bdsString             start=/\v'/ skip=/\v\\./ end=/\v'/ 
 
-syntax match   bdsHelpString         /\vhelp\s.*$/ contains=bdsSpecialChar
+"syntax match   bdsHelpString         /\vhelp\s.*$/ contains=bdsSpecialChar
+syntax region  bdsHelpString         start="\vhelp\s" skip="\v\\"  end="\v\n" contains=bdsSpecialChar
 syntax keyword bdsSpecialChar        help contained
 syntax keyword bdsHelpUnsorted       helpUnsorted
 

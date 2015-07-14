@@ -85,8 +85,10 @@ enbale, or non-empty for 'indentexpt'
 
 ## Useful links
 
-- [syntax highlight thoughbot](https://robots.thoughtbot.com/writing-vim-syntax-plugins)
-- [plugin for go language](https://github.com/fatih/vim-go)
-- [more on indent vim scripting](http://www.psy.swansea.ac.uk/staff/carter/Vim/vim_indent.htm)
+- [Syntax highlight thoughbot](https://robots.thoughtbot.com/writing-vim-syntax-plugins)
+- [Syntax highlight](http://usevim.com/2012/03/07/syntax-highlighting/)
+- [Syntax highlight Intro Guide](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
+- [GO language - syntax highlight plugin](https://github.com/fatih/vim-go)
+- [How to write indent script vim](http://www.psy.swansea.ac.uk/staff/carter/Vim/vim_indent.htm)
 - [Learn vim the hard way](http://learnvimscriptthehardway.stevelosh.com/chapters/43.html) great book
-- [Good intro guide to syntax highlight](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
+- [Regex quick starrt](http://www.rexegg.com/regex-quickstart.html)
