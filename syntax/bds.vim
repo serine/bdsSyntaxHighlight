@@ -12,7 +12,8 @@ endif
 syntax keyword bdsConditional        if else
 syntax keyword bdsRepeat             for while
 syntax keyword bdsBoolean            true false
-syntax keyword bdsType               string int bool real contained
+syntax keyword bdsType               string int real contained
+syntax keyword bdsBoolType           bool
 syntax keyword bdsSpecialStatement   task sys dep par
 syntax keyword bdsPrintStatements    print println
 syntax keyword bdsStatement          break continue wait exit return
@@ -51,6 +52,7 @@ syntax keyword bdsHelpUnsorted       helpUnsorted
 
 syntax match   bdsStringContainer    /\(string\(\[\]\|{}\)\|string\)/ contains=bdsType
 syntax match   bdsNumberContainer    /\(int\(\[\]\|{}\)\|int\)/ contains=bdsType
+syntax match   bdsNumberContainer    /\(real\(\[\]\|{}\)\|real\)/ contains=bdsType
 
 syntax match   bdsStringFunction           /\(string\(\[\]\|{}\)\|string\)\s[A-Za-z]*(/ contains=bdsType
 syntax match   bdsNumberFunction           /\(int\(\[\]\|{}\)\|int\)\s[A-Za-z]*(/ contains=bdsType
@@ -64,6 +66,7 @@ highlight link bdsConditional        Conditional
 highlight link bdsRepeat             Repeat
 highlight link bdsBoolean            Boolean
 highlight link bdsType               Type
+highlight link bdsBoolType           Type
 highlight link bdsSpecialStatement   Function
 highlight link bdsPrintStatements    Function
 highlight link bdsStatement          Statement
