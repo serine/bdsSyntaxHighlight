@@ -3,7 +3,7 @@
 " Maintainer: Kirill Tsyganov <kirill.tsyganov@monash.edu>
 " Created: 6 July 2015
 " Version: 1.0
-" Latest Revision: 14 July 2015
+" Latest Revision: 15 July 2015
 
 if exists ("b:current_syntax")
   finish
@@ -17,7 +17,7 @@ endfunction
 syntax keyword bdsConditional        if else
 syntax keyword bdsRepeat             for while
 syntax keyword bdsBoolean            true false
-syntax keyword bdsType               string int real
+syntax keyword bdsType               string int real nextgroup=bdsContainer,bdsFunction skipwhite
 syntax keyword bdsBoolType           bool
 syntax keyword bdsSpecialStatement   task sys dep par
 syntax keyword bdsPrintStatements    print println
@@ -40,9 +40,9 @@ syntax match   bdsSpecialOperator    /<-/
 "look like there are multiple ways to match bdsCommnet
 "syntax region  bdsComment            start=/\v\/\*/ end=/\v\*\// contains=bdsTodo
 syntax keyword bdsTodo               FIXME NOTE NOTES TODO XXX contained
-syntax region  bdsComment            start="/\*" end="\*/" contains=bdsTodo
-syntax match   bdsComment            /\v#.*/  contains=bdsTodo
-syntax match   bdsComment            /\v\/\/.*/ contains=bdsTodo
+syntax region  bdsComment            start="/\*" end="\*/" contains=bdsTodo,@Spell
+syntax match   bdsComment            /\v#.*/  contains=bdsTodo,@Spell
+syntax match   bdsComment            /\v\/\/.*/ contains=bdsTodo,@Spell
 
 syntax keyword bdsError              error warning
 
@@ -52,13 +52,11 @@ syntax keyword bdsHelpKeyword        help contained
 syntax region  bdsHelpString         start="\vhelp\s" skip="\v\\"  end="\v\n" contains=bdsHelpKeyword
 
 " no corresponding highlight link
-syntax keyword bdsContainerString    string int real contained
-syntax match   bdsContainer          /[A-Za-z]*\[\]\|{}/ contains=bdsContainerString
+syntax match   bdsContainer          /\(\[\]\|{}\)/ contained
 
 " \@= is a look ahead Vim regex
-"syntax match   bdsStringFunction     /[A-Za-z]*\(\[\]\|{}\)\s*[A-Za-z]*\((\)\@=/ contains=bdsContainerString
-syntax match   bdsFunction           /[A-Za-z]*\(\[\]\|{}\)\s*[A-Za-z]*\((\)\@=/ contains=bdsContainer
-
+syntax match   bdsFunction           /\(\[\]\|{}\)\s*[A-Za-z]*\((\)\@=/ contains=bdsContainer
+"
 "------------------------------
 " higlighting
 "------------------------------
