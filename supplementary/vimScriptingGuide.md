@@ -9,9 +9,10 @@ of information.
 ## _ftplugin_
 
 I am still yet to comprehend subtle difference between **ftplugin** and **indent** directories (files)...
-Thus far I understand that anything that is related to a plugin will go in **fttplugin** but the indentation
-of the code, which should go to the **indent** directory (only out of convention). I understand you can
-have you indentation code in **ftplugin** file and it will work just fine.
+My understanding of the  **ftplugin** directory is: It will hold all files that are related to a particular 
+plugin. You could place indentation file into this directory as well, but better practice is to place
+indentation file into its own directory a.k.a **indent**. I understand you can have you indentation code in
+the **ftplugin** file and it will work just fine.
 
 ## Vim basics
 
@@ -49,10 +50,19 @@ beginning of a line of text
 > 	/\%>199l\%<300llimit
 > Also see |/\%>l|.
 
-## I want to understand Vim scripting in the context of _indent.vim_ file 
+----------------------------------------------------------------------------------------------------
 
-There are four main methods available fo rindentation, each one overrides the previous if it is
-enbale, or non-empty for 'indentexpt'
+- `expandtab` boolean (default off) By setting its 'on' spaces will be used instead of tabs
+- `autoindent` boolean (default off) copy indent from the current line when starting a new line
+
+_Reference_
+
+1. Vim help `options.txt`
+
+## How to write an _indent.vim_ file ..?
+
+There are four main methods available for indentation, each one overrides the previous if it is
+enable, or non-empty for 'indentexpt'
 
 - `autointent` uses the indent from the previous line
 - `smartindent` is like autoindent but also recognizes some C syntax to increase/reduce the indent
@@ -61,7 +71,7 @@ enbale, or non-empty for 'indentexpt'
 - `indentexpr` the most flexible of all: Evaluates an expression to compute the indent of a line.
   When non-empty this method overrides the other ones.
 
-- `let` command assigns a value to a variable e.g `let {variable} = {expression}
+- `let` command assigns a value to a variable e.g `let {variable} = {expression}`
 
 ## Special functions, variables (options), and commands that we need to use for Vim script
 
@@ -80,8 +90,8 @@ enbale, or non-empty for 'indentexpt'
 
 ## Other
 
-- `v:lnum` (lnumber-variable) line number for the indentexpr. The `v` prefix means variable
-           predefined by Vim
+- `v:lnum` (lnumber-variable) line number for the indentexpr. The `v` prefix means variable predefined by Vim
+- `b:did_indent` buffer-local variable indicates that current buffer already has script-based indenting enabled
 
 ## Useful links
 
@@ -90,5 +100,6 @@ enbale, or non-empty for 'indentexpt'
 - [Syntax highlight Intro Guide](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
 - [GO language - syntax highlight plugin](https://github.com/fatih/vim-go)
 - [How to write indent script vim](http://www.psy.swansea.ac.uk/staff/carter/Vim/vim_indent.htm)
-- [Learn vim the hard way](http://learnvimscriptthehardway.stevelosh.com/chapters/43.html) great book
-- [Regex quick starrt](http://www.rexegg.com/regex-quickstart.html)
+- [Learn vim the hard way](http://learnvimscriptthehardway.stevelosh.com/chapters/43.html)
+- [Regex quick start](http://www.rexegg.com/regex-quickstart.html)
+- [Good explanation of indentation options](http://vim.wikia.com/wiki/Indenting_source_code)
