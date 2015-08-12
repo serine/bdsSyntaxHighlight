@@ -16,6 +16,20 @@ the **ftplugin** file and it will work just fine.
 
 ## Vim basics
 
+- To define a function in Vim  use `function` keyword following the function name e.g 
+```Vim
+function Test()
+  echom "Test!"
+endfuction
+```
+Please note that in Vim function name must start with a capital letter !
+You can overwrite previously defined or an built-in function using `!` e.g 
+```Vim
+function! Test()
+  echom "This function overwrites previously defined Test()"
+endfuction
+```
+
 - `:onoremap b /return<cr>` The first bit of the mapping is some what irrelevant, but the second part 
 says: from `/` which is from cursor to the "return" word, which can really be anything.
 
@@ -95,11 +109,13 @@ enable, or non-empty for 'indentexpt'
 
 ## Useful links
 
-- [Syntax highlight thoughbot](https://robots.thoughtbot.com/writing-vim-syntax-plugins)
+- [Syntax highlight thoughtbot](https://robots.thoughtbot.com/writing-vim-syntax-plugins)
 - [Syntax highlight](http://usevim.com/2012/03/07/syntax-highlighting/)
 - [Syntax highlight Intro Guide](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
 - [GO language - syntax highlight plugin](https://github.com/fatih/vim-go)
 - [How to write indent script vim](http://www.psy.swansea.ac.uk/staff/carter/Vim/vim_indent.htm)
 - [Learn vim the hard way](http://learnvimscriptthehardway.stevelosh.com/chapters/43.html)
 - [Regex quick start](http://www.rexegg.com/regex-quickstart.html)
+- [Regular expression 101](http://vimregex.com/)
 - [Good explanation of indentation options](http://vim.wikia.com/wiki/Indenting_source_code)
+- [Interesting article that points to useful Vim scripting resources](http://foosoft.net/news/2014-12-07/)
