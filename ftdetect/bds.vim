@@ -5,4 +5,7 @@
 " Version: 1.0
 " Latest Revision: 12 July 2015
 
-au BufRead,BufNewFile *.bds set filetype=bds
+" apparently it friendlier to use`setfiletype`
+" I'll investigate this further
+"autocmd BufRead,BufNewFile *.bds setfiletype bds
+autocmd BufRead,BufNewFile *.bds set filetype=bds
