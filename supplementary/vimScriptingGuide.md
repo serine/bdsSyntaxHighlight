@@ -9,6 +9,14 @@
   - [indent](#indent)
   - [syntax](#syntax)
 - [Writing indent file](#writing-indent-file)
+  - [Basic file indentation](#basic-file-indentation)
+  - [Other indentation options](#other-indentation-options)
+  - [Tabs and Spaces](#tabs-and-spaces)
+  - [indent file](#indent-file)
+  - [built-in functions](#built-in-functions)
+  - [Other](#other)
+  - [References](#references)
+- [Useful links](#usefuls-links)
 
 ## House keeping
 
@@ -62,9 +70,7 @@ This directory holds your indent.vim file
 
 ## Writing indent file
 
-### Indentation basics
-
-#### Basic file indentation
+### Basic file indentation
 
 There are four main methods available for indentation, each one overrides the previous if it is enable. Three explained below and 'indentexpr' explained in [indent file](#indent-file) section.
 
@@ -72,7 +78,7 @@ There are four main methods available for indentation, each one overrides the pr
 also includes other filetypes detection.
 - `:let b:did_indent = 1` will disable indentation. You can create a file in the `~/.vim/indent/` directory with your specific file name e.g bds.vim and include `let b:did_indent = 1` which will disable any previous indentation for this file.
 
-#### Other indentation options
+### Other indentation options
 
 - `autoindent` boolean (default off) copy indent from the current line when starting a new line. It uses the
 indent from the previous line
@@ -80,7 +86,7 @@ indent from the previous line
   where appropriate
 - `cindent` works more cleverly than the other two and is configurable to different indenting styles
 
-#### Tabs and spaces
+### Tabs and Spaces
 
 - `>>` use this key to increase the amount of indent in a line. The amoutn of indent added is specified with
 `shiftwidth` value, default [8].
@@ -89,23 +95,14 @@ indent from the previous line
 <Tab> key is `tabstop`, which is set to default value [8].
 - `expandtab` boolean (default off) By setting its 'on' spaces will be used instead of tabs. This options allowsyou to use <Tab> key but have no tabs in your file only spaces.
 
-#### indent file
+### indent file
 
 In order to write your own indent file, it must set the `indentexpr` options.
 
-- `indentexpr` the most flexible of the other three described in [basic file indentation](#basic-file-indentation). If `indentexpr` is non-empty this method overrides the other ones. It evaluates an expression to compute the indent of each line.
+- `indentexpr` is the most flexible of the other three described in [basic file indentation](#basic-file-indentation):
+    - when `indentexpr` is non-empty this method overrides the other ones. It evaluates an expression to compute the indent of each line. It si used when a new line is creted
 
-#### References
-
-  - `usr_30.txt` section 30.5
-  - `usr_25.txt` section 25.3
-  - `indent.txt`
-  - `options.txt`
-  - `usr_41.txt` write a Vim script
-
-- `let` command assigns a value to a variable e.g `let {variable} = {expression}`
-
-#### built-in functions
+### built-in functions
 
 - `exists("identifier")` Returns true if this identifier already exists. Handy for checking that we're nott                      about to overwrite something.t                      about to overwrite something.
 - `getline(line number)` Returns a string containing the given line's contents.
@@ -119,10 +116,19 @@ In order to write your own indent file, it must set the `indentexpr` options.
 - `shiftwidth` The amount of columns (i.e. the number of spaces, or the equivalent number of tabs) corresponding
               to one indent level. Often set by the user to suit their own taste.
 
-## Other
+### Other
 
+- `let` command assigns a value to a variable e.g `let {variable} = {expression}`
 - `v:lnum` (lnumber-variable) line number for the indentexpr. The `v` prefix means variable predefined by Vim
 - `b:did_indent` buffer-local variable indicates that current buffer already has script-based indenting enabled
+
+### References
+
+  - `usr_30.txt` section 30.5
+  - `usr_25.txt` section 25.3
+  - `indent.txt`
+  - `options.txt`
+  - `usr_41.txt` write a Vim script
 
 ## Useful links
 
