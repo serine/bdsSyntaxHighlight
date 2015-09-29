@@ -8,7 +8,7 @@
   - [ftplugin](#ftplugin)
   - [indent](#indent)
   - [syntax](#syntax)
-- [Writing indent.vim file](#writing-indent.vim-file)
+- [Writing indent file](#writing-indent-file)
 
 ## House keeping
 
@@ -60,7 +60,7 @@ your syntax file goes into this directory
 This directory holds your indent.vim file
 
 
-## Writing _indent.vim_ file
+## Writing indent file
 
 ### Indentation basics
 
