@@ -1,5 +1,15 @@
 # Vim Scripting guide
 
+## Content
+
+- [House keeping](#house-keeping)
+- [Directory hierarchy](#directory-hierarchy)
+  - [ftdetect](#ftdetect)
+  - [ftplugin](#ftplugin)
+  - [indent](#indent)
+  - [syntax](#syntax)
+- [Writing indent.vim file](#writing-indent.vim-file)
+
 ## House keeping
 
 - Start by making a `*.vim` file  with your vim code and 'execute' it by opening vim and 'sourcing' your script file in e.g `:source /path/to/your/script.vim`
@@ -41,9 +51,14 @@ plugin. You could place indentation file into this directory as well, but better
 indentation file into its own directory a.k.a **indent**. I understand you can have you indentation code in
 the **ftplugin** file and it will work just fine.
 
+### _syntax_
+
+your syntax file goes into this directory
+
 ### _indent_
 
 This directory holds your indent.vim file
+
 
 ## Writing _indent.vim_ file
 
