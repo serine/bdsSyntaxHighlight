@@ -70,6 +70,10 @@ This directory holds your indent.vim file
 
 ## Writing indent file
 
+### Aim
+
+In summary `indent.vim` file returns a numerical value that tells Vim to **indent**, **un-indent** or **keep-the-same** indentation level of the current line by that number of spaces.
+
 ### Basic file indentation
 
 There are four main methods available for indentation, each one overrides the previous if it is enable. Three explained below and 'indentexpr' explained in [indent file](#indent-file) section.
@@ -100,15 +104,20 @@ indent from the previous line
 In order to write your own indent file, it must set the `indentexpr` options.
 
 - `indentexpr` is the most flexible of the other three described in [basic file indentation](#basic-file-indentation):
-    - when `indentexpr` is non-empty this method overrides the other ones. It evaluates an expression to compute the indent of each line. It si used when a new line is creted
+    - when `indentexpr` is non-empty this method overrides the other ones
+    - It evaluates an expression to compute the indent for each line
+    - It is used when a new line is created
+    - The expression must return the number of spcaes worth of indent. If `-1` is returned then current line indent is kept (this means 'autoindent' is used for the indent)
 
 ### built-in functions
 
+- `getline({lnum})` Returns a string containing the given line's contents.
+- `indent({lnum})` Returns a number of the indentation level of the specified line. The indent is counted in spaces.
+- `prevnonblank({lnum})` Returns a number corresponding to the line number of the first line (including and going backwards from the specified line) that isn't merely blank.
+
 - `exists("identifier")` Returns true if this identifier already exists. Handy for checking that we're nott                      about to overwrite something.t                      about to overwrite something.
-- `getline(line number)` Returns a string containing the given line's contents.
-- `prevnonblank(line number)` Returns a number corresponding to the line number of the first line
-                             (including and going backwards from the specified line) that isn't merely blank.
-- `indent(line number)` Returns the indentation level of the specified line
+
+
 - `setlocal` Sets the value of a variable, but only within the current scope.
 - `indentexpr` Vim calls the function identified by this option to calculate the required indent for a line. 
 - `indentkeys` If a line contains any of the strings contained in this option, Vim calls the indent function.
@@ -128,13 +137,16 @@ In order to write your own indent file, it must set the `indentexpr` options.
   - `usr_25.txt` section 25.3
   - `indent.txt`
   - `options.txt`
+  - `eval.txt`
   - `usr_41.txt` write a Vim script
+  - `help indent()`
+  - [`:help internal-variables`](http://vimhelp.appspot.com/eval.txt.html#internal-variables) explains what are different prefixs to the variable mean
 
 ## Useful links
 
-- [Syntax highlight thoughtbot](https://robots.thoughtbot.com/writing-vim-syntax-plugins)
-- [Syntax highlight](http://usevim.com/2012/03/07/syntax-highlighting/)
-- [Syntax highlight Intro Guide](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
+- [Syntax plugin - thoughtbot](https://robots.thoughtbot.com/writing-vim-syntax-plugins)
+- [Syntax highlight - usevim](http://usevim.com/2012/03/07/syntax-highlighting/)
+- [Syntax highlight - Vim wiki; Celestia example](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
 - [GO language - syntax highlight plugin](https://github.com/fatih/vim-go)
 - [How to write indent script vim](http://www.psy.swansea.ac.uk/staff/carter/Vim/vim_indent.htm)
 - [Learn vim the hard way](http://learnvimscriptthehardway.stevelosh.com/chapters/43.html)
