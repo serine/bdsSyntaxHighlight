@@ -133,25 +133,25 @@ In order to write your own indent file, it must set the `indentexpr` options.
 
 ### References
 
-  - `usr_30.txt` section 30.5
   - `usr_25.txt` section 25.3
+  - [`usr_30.txt` section 30.5](http://vimhelp.appspot.com/usr_30.txt.html#30.5) Tabs and spaces
+  - [`usr_41.txt`](http://vimhelp.appspot.com/usr_41.txt.html#usr_41.txt) Write a Vim script
   - `indent.txt`
   - `options.txt`
-  - `eval.txt`
-  - `usr_41.txt` write a Vim script
-  - `help indent()`
+  - [`eval.txt`](http://vimhelp.appspot.com/eval.txt.html) Expression evaluation
+  - [`help indent()`](http://vimhelp.appspot.com/eval.txt.html)
   - [`:help internal-variables`](http://vimhelp.appspot.com/eval.txt.html#internal-variables) explains what are different prefixs to the variable mean
 
 ## Useful links
 
-- [Syntax plugin - thoughtbot](https://robots.thoughtbot.com/writing-vim-syntax-plugins)
-- [Syntax highlight - usevim](http://usevim.com/2012/03/07/syntax-highlighting/)
-- [Syntax highlight - Vim wiki; Celestia example](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
-- [GO language - syntax highlight plugin](https://github.com/fatih/vim-go)
+- [Thoughtbot - Syntax plugin](https://robots.thoughtbot.com/writing-vim-syntax-plugins)
+- [usevim - Syntax highlight](http://usevim.com/2012/03/07/syntax-highlighting/)
+- [Vim wiki - Syntax highlight](http://vim.wikia.com/wiki/Creating_your_own_syntax_files)
+- [Vim wiki - Indenting source code](http://vim.wikia.com/wiki/Indenting_source_code)
+- [IBM - Vim scripting](http://www.ibm.com/developerworks/library/l-vim-script-1/)
 - [How to write indent script vim](http://www.psy.swansea.ac.uk/staff/carter/Vim/vim_indent.htm)
 - [Learn vim the hard way](http://learnvimscriptthehardway.stevelosh.com/chapters/43.html)
 - [Regex quick start](http://www.rexegg.com/regex-quickstart.html)
 - [Regular expression 101](http://vimregex.com/)
-- [Good explanation of indentation options](http://vim.wikia.com/wiki/Indenting_source_code)
+- [GO language - syntax highlight plugin](https://github.com/fatih/vim-go)
 - [Interesting article that points to useful Vim scripting resources](http://foosoft.net/news/2014-12-07/)
-- [Vim scripting](http://www.ibm.com/developerworks/library/l-vim-script-1/)
